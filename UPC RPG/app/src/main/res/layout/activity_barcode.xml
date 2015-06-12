@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff0000ff"
+    android:orientation="vertical"
+    tools:context="com.javacodegeeks.androidstartactivityforresultexample.ActivityOne"
+    android:weightSum="1"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:background="@drawable/barcode_monster"
+        android:scaleType="fitXY"
+        android:layout_above="@+id/scanner2"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/scanner2"
+        android:layout_alignStart="@+id/scanner2" />
+
+    <Button
+        android:id="@+id/scanner2"
+        android:layout_width="356dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:onClick="scanBar"
+        android:text="Bar Code"
+        android:textSize="18dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+    </Button>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.10" />
+
+</RelativeLayout>

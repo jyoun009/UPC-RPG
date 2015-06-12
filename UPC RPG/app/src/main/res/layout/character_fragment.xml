@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/custom_border"
+    android:id="@+id/character_fragment"
+    android:weightSum="1">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/custom_border"
+        android:id="@+id/ll1">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:id="@+id/characterPortrait"
+            android:layout_gravity="right"
+            android:background="#ff0000ff"
+            android:layout_weight=".5"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:layout_weight=".5"
+            android:background="@drawable/custom_border">
+            <TextView
+                android:id="@+id/characterName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="@dimen/text_size"
+                android:background="#ff0000ff"
+                android:textColor="#ffff"
+                android:layout_weight="0.5"
+                android:text="Name: " />
+            <TextView
+                android:id="@+id/characterHP"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="@dimen/text_size"
+                android:background="#ff0000ff"
+                android:textColor="#ffff"
+                android:layout_weight="1"
+                android:text="HP: "/>
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll1"
+        android:orientation="vertical"
+        android:background="@drawable/custom_border"
+        android:id="@+id/ll2">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="#ff0000ff"
+                android:id="@+id/iWeapon"/>
+            <TextView
+                android:id="@+id/character_weapon"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:textSize="@dimen/text_size2"
+                android:background="#ff0000ff"
+                android:textColor="#ffff"
+                android:text=""/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="#ff0000ff"
+                android:id="@+id/iArmor"/>
+            <TextView
+                android:id="@+id/character_armor"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:textSize="@dimen/text_size2"
+                android:background="#ff0000ff"
+                android:textColor="#ffff"
+                android:text=""/>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="#ff0000ff"
+                android:id="@+id/iGloves"/>
+            <TextView
+                android:id="@+id/character_gloves"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:textSize="@dimen/text_size2"
+                android:background="#ff0000ff"
+                android:textColor="#ffff"
+                android:text=""/>
+
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="#ff0000ff"
+                android:id="@+id/iShoes"/>
+
+            <TextView
+                android:id="@+id/character_shoes"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:textSize="@dimen/text_size2"
+                android:background="#ff0000ff"
+                android:textColor="#ffff"
+                android:text=""/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll2"
+        android:orientation="vertical"
+        android:background="@drawable/custom_border"
+        android:id="@+id/ll3">
+        <TextView
+            android:id="@+id/character_attack"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="@dimen/text_size2"
+            android:background="#ff0000ff"
+            android:textColor="#ffff"
+            android:text="Attack: "/>
+        <TextView
+            android:id="@+id/character_defense"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="@dimen/text_size2"
+            android:background="#ff0000ff"
+            android:textColor="#ffff"
+            android:text="Defense: "/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll3"
+        android:background="@drawable/custom_border">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/increase_hit_points_button"
+            android:text="HEAL"
+            android:textColor="#ffff"
+            android:background="#ff0000ff"
+            android:textSize="@dimen/text_size"
+            android:layout_weight=".5"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/decrease_hit_points_button"
+            android:text="PUNCH"
+            android:textColor="#ffff"
+            android:background="#ff0000ff"
+            android:layout_weight=".5"
+            android:textSize="@dimen/text_size"/>
+
+        </LinearLayout>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sound?"
+        android:id="@+id/checkBox"
+        android:layout_gravity="center_horizontal" />
+
+
+
+</LinearLayout>
