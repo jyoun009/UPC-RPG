@@ -43,7 +43,7 @@
                 android:background="#ff0000ff"
                 android:textColor="#ffff"
                 android:layout_weight="1"
-                android:text="HP: "/>
+                android:text=""/>
         </LinearLayout>
 
         </LinearLayout>
@@ -58,7 +58,8 @@
         android:id="@+id/ll2">
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="fill_parent"
+            android:background="#ff0000ff">
             <ImageView
                 android:layout_width="45dp"
                 android:layout_height="45dp"

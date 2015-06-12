@@ -39,19 +39,6 @@ public class CharacterFragment extends Fragment implements Hideable {
         characterName.append(cName);
 
         characterHP = (TextView) v.findViewById(R.id.characterHP);
-
-        char_HP = CharacterData.getHit_points() + CharacterData.getArmor().getHp() + CharacterData.getGloves().getHp() + CharacterData.getShoes().getHp();
-        char_Max_HP = CharacterData.getMax_hit_points() + CharacterData.getArmor().getHp() + CharacterData.getGloves().getHp() + CharacterData.getShoes().getHp();
-
-        String cHP = char_HP + "/" + char_Max_HP;
-        characterHP.append(cHP);
-
-        character_attack = CharacterData.getAttack() + CharacterData.getWeapon1().getAttack();
-        character_defense = CharacterData.getDefense() + CharacterData.getArmor().getDefense() + CharacterData.getGloves().getDefense()  + CharacterData.getShoes().getDefense() ;
-
-        characterPortrait = (ImageView) v.findViewById(R.id.characterPortrait);
-        characterPortrait.setImageResource(R.drawable.fighter);
-
         characterArmor=(TextView)v.findViewById(R.id.character_armor);
         characterGloves=(TextView)v.findViewById(R.id.character_gloves);
         characterShoes=(TextView)v.findViewById(R.id.character_shoes);
@@ -62,6 +49,17 @@ public class CharacterFragment extends Fragment implements Hideable {
         iGloves=(ImageView)v.findViewById(R.id.iGloves);
         iShoes=(ImageView)v.findViewById(R.id.iShoes);
         iWeapon=(ImageView)v.findViewById(R.id.iWeapon);
+
+        characterPortrait = (ImageView) v.findViewById(R.id.characterPortrait);
+        characterPortrait.setImageResource(R.drawable.fighter);
+
+        char_HP = CharacterData.getHit_points() + CharacterData.getArmor().getHp() + CharacterData.getGloves().getHp() + CharacterData.getShoes().getHp();
+        char_Max_HP = CharacterData.getMax_hit_points() + CharacterData.getArmor().getHp() + CharacterData.getGloves().getHp() + CharacterData.getShoes().getHp();
+
+        characterHP.setText("HP: " + char_HP + "/" + char_Max_HP);
+
+        character_attack = CharacterData.getAttack() + CharacterData.getWeapon1().getAttack();
+        character_defense = CharacterData.getDefense() + CharacterData.getArmor().getDefense() + CharacterData.getGloves().getDefense()  + CharacterData.getShoes().getDefense() ;
 
         characterArmor.setText("Armor: "+CharacterData.getArmor().toString());
         iArmor.setImageDrawable(CharacterData.getArmor().getDrawable());
@@ -176,9 +174,25 @@ public class CharacterFragment extends Fragment implements Hideable {
 
     public void onShowFragment() {
 
-        characterHP = (TextView) getView().findViewById(R.id.characterHP);
-        String text = "HP: " + CharacterData.getHit_points() + "/" + CharacterData.getMax_hit_points();
-        characterHP.setText(text);
+        char_HP = CharacterData.getHit_points() + CharacterData.getArmor().getHp() + CharacterData.getGloves().getHp() + CharacterData.getShoes().getHp();
+        char_Max_HP = CharacterData.getMax_hit_points() + CharacterData.getArmor().getHp() + CharacterData.getGloves().getHp() + CharacterData.getShoes().getHp();
+
+        characterHP.setText("HP: " + char_HP + "/" + char_Max_HP);
+
+        character_attack = CharacterData.getAttack() + CharacterData.getWeapon1().getAttack();
+        character_defense = CharacterData.getDefense() + CharacterData.getArmor().getDefense() + CharacterData.getGloves().getDefense()  + CharacterData.getShoes().getDefense() ;
+
+        characterArmor.setText("Armor: "+CharacterData.getArmor().toString());
+        iArmor.setImageDrawable(CharacterData.getArmor().getDrawable());
+        characterGloves.setText("Gloves: "+CharacterData.getGloves().toString());
+        iGloves.setImageDrawable(CharacterData.getGloves().getDrawable());
+        characterShoes.setText("Shoes: "+CharacterData.getShoes().toString());
+        iShoes.setImageDrawable(CharacterData.getShoes().getDrawable());
+        characterWeapon.setText("Weapon: "+CharacterData.getWeapon1().toString());
+        iWeapon.setImageDrawable(CharacterData.getWeapon1().getDrawable());
+        characterAttack.setText("Attack: " + CharacterData.getAttack() + " + " + CharacterData.getWeapon1().getAttack() + " = " + character_attack);
+        characterDefense.setText("Defense: " + CharacterData.getDefense() + " + " + CharacterData.getArmor().getDefense() + " + " + CharacterData.getGloves().getDefense() + " + " + CharacterData.getShoes().getDefense() + " = " + character_defense);
+
     }
 
     public void onHideFragment() {

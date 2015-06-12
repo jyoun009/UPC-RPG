@@ -24,11 +24,11 @@ public class CharacterData {
 
     public static long max_skill_points = 20;
 
-    public static Armor armor = SpriteGenerator.armorGenerator(3);
+    public static Armor armor = SpriteGenerator.armorGenerator(0);
 
-    public static Armor shoes = SpriteGenerator.armorGenerator(4);
+    public static Armor shoes = SpriteGenerator.armorGenerator(6);
 
-    public static Armor gloves = SpriteGenerator.armorGenerator(5);
+    public static Armor gloves = SpriteGenerator.armorGenerator(3);
 
     public static Weapon weapon1 = SpriteGenerator.weaponGenerator(0);
 
